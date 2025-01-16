@@ -1,0 +1,16 @@
+@font-face{
+  font-family: "SperryPC";
+  font-weight: 600;
+  src: url("https://cdn.glitch.global/be2a1294-c82c-45bc-b95b-5bd07f71bab3/Web437_SperryPC_CGA-2y.woff?v=1737000840759")
+}
+
+main {
+  font-family: 'SperryPC',monospace;
+  font-size: 16px;
+}
+
+.timer-holder{
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

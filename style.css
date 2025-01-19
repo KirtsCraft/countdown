@@ -15,4 +15,8 @@ main {
   width: 50%;
   max-width: 900px;
   min-width: 500px;
+  transform:translate(+50%,+50%);
+}
+.timer{
+  text-align: center;
 }

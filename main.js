@@ -37,5 +37,5 @@ function countdown(endDate, docID) {
 function allCountdowns(){
   countdown("2025-06-16T12:30:00", "john");
   countdown("2025-04-11T13:30:00","springtimer");
-  countdown("2029-10-20T09:00:00", "trumptimer");
+  countdown("2028-01-20T09:00:00", "trumptimer");
 }

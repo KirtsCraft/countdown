@@ -9,13 +9,48 @@
     <link rel="icon" href="./assets/favicon.png" type="image/x-icon" />
   </head>
   <body>
-    <main>
-      <div class="timer-holder">
+    <div id="container">
+      <div id="timer-holder">
+        <span>
+        Time until end of year:
+        </span>
         <div class="timer">
-          <h3 id="john"></h3>
+          <span id="john"></span>
         </div>
       </div>
-    </main>
-    <script src="main.js"></script>
+      <table>
+        <td class="column1">
+          <div class="subtimer">
+            <span class="timer-header">
+              Time until spring break:
+            </span>
+            <span class="timer" id="springtimer"></span>
+          </div>
+          <div class="subtimer">
+            <span class="timer-header">
+              placeholder
+            </span>
+            <span class="timer">Finished!</span>
+          </div>
+        </td>
+        <td class="column2">
+          <div class="subtimer">
+            <span class="timer-header">
+              placeholder
+            </span>
+            <span class="timer">Finished!</span>
+          </div>
+          <div class="subtimer">
+            <span class="timer-header">
+              placeholder
+            </span>
+            <span class="timer">Finished!</span>
+          </div>
+        </td>
+      </table>
+    </div>
+  <script src="main.js"></script>
   </body>
+  <footer>
+  </footer>
 </html>

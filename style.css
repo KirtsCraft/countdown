@@ -4,19 +4,24 @@
   src: url("./assets/Web437_SperryPC_CGA-2y.woff")
 }
 
+body{
+  background-color: #00010a;
+}
+
 main {
   font-family: 'SperryPC',monospace;
   font-size: 16px;
 }
 
 .timer-holder{
-  position: absolute;
-  top: 50%;
-  width: 50%;
-  max-width: 900px;
-  min-width: 500px;
-  transform:translate(+50%,+50%);
+  margin: auto;
+  width: 25%;
+  border: 3px solid #013220;
+  background-color: #ccffcc;
+  padding: 10px;
 }
+
 .timer{
   text-align: center;
+  font-size: 24px
 }

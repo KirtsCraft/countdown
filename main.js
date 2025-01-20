@@ -1,4 +1,4 @@
-const ENDDATE = "2025-6-16T12:30:00";
+const ENDDATE = "2025-06-16T12:30:00";
 
 window.onload = function main() {
   setInterval(countdown, 200);

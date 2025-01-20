@@ -1,12 +1,12 @@
 const ENDDATE = "2025-06-16T12:30:00";
 
 window.onload = function main() {
-  setInterval(countdown, 200);
+  setInterval(allCountdowns, 200);
 };
 
-function countdown() {
+function countdown(endDate, docID) {
   let time = new Date().getTime();
-  let endTime = new Date(ENDDATE).getTime();
+  let endTime = new Date(endDate).getTime();
   let timeUntilEnd = endTime - time;
 
   const s = Math.floor(timeUntilEnd / 1000) % 60;
@@ -31,5 +31,10 @@ function countdown() {
     text = "Finished!";
   }
 
-  document.getElementById("john").innerHTML = text;
+  document.getElementById(docID).innerHTML = text;
+}
+
+function allCountdowns(){
+  countdown("2025-06-16T12:30:00", "john");
+  countdown("2025-04-11T13:30:00","springtimer")
 }

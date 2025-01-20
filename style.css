@@ -1,27 +1,69 @@
-@font-face{
+@font-face {
   font-family: "SperryPC";
   font-weight: 600;
-  src: url("./assets/Web437_SperryPC_CGA-2y.woff")
+  src: url("./assets/Web437_SperryPC_CGA-2y.woff");
 }
 
-body{
+@font-face {
+  font-family: "IBM-VGA";
+  font-weight: 600;
+  src: url("./assets/Web437_IBM_VGA_8x16.woff");
+}
+
+:root {
+}
+
+body {
   background-color: #000011;
 }
 
-main {
-  font-family: 'SperryPC',monospace;
+div#container {
+  font-family: "IBM-VGA", monospace;
   font-size: 16px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.timer-holder{
-  margin: auto;
-  width: 25%;
+div#timer-holder {
   border: 3px solid #013220;
   background-color: #ccffcc;
   padding: 10px;
+  padding-top: 3px;
+  padding-bottom: 0px;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  font-size: 16px;
 }
 
-.timer{
+#timer-header{
+  translate: 50%, 50%;
+}
+
+.timer {
+  padding: 5px;
+  padding-bottom: 10px;
+  display: block;
+  font-family: "SperryPC", monospace;
+  font-size: 16px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  box-sizing: border-box;
+}
+
+.column1,
+.column2 {
+  width:50%
+}
+
+.subtimer {
+  border: 3px solid #013220;
+  background-color: #ccffcc;
+  padding: 0px;
   text-align: center;
-  font-size: 24px
+  font-size: 16px;
+  margin-top: 3px;
 }

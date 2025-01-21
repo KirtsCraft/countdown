@@ -1,7 +1,10 @@
-const ENDDATE = "2025-06-16T12:30:00";
-
-window.onload = function main() {
-  setInterval(allCountdowns, 200);
+window.onload = async function main() {
+  let timerData = await getTimerData();
+  console.log(timerData);
+  timerData.forEach(useTimerData);
+  timerData.forEach((timer) => {
+    setInterval(() => updateTimers(timer.date, timer.id), 200);
+  });
 };
 
 function countdown(endDate, docID) {
@@ -34,8 +37,42 @@ function countdown(endDate, docID) {
   document.getElementById(docID).innerHTML = text;
 }
 
-function allCountdowns(){
+async function getTimerData() {
+  try {
+    const res = await fetch("./timer-data.json");
+    if (!res.ok) {
+      throw new Error(`HTTP error! Status: ${res.status}`);
+    }
+    return await res.json();
+  } catch (error) {
+    console.error("Unable to fetch data:", error);
+  }
+}
+
+function useTimerData(d) {
+  const subTimerDiv = document.createElement("div");
+  subTimerDiv.setAttribute("class", "subtimer");
+
+  const headerSpan = document.createElement("span");
+  headerSpan.setAttribute("class", "timer-header");
+  headerSpan.textContent = d.head;
+
+  const timerSpan = document.createElement("span");
+  timerSpan.setAttribute("class", "timer");
+  timerSpan.setAttribute("id", d.id);
+
+  subTimerDiv.appendChild(headerSpan);
+  subTimerDiv.appendChild(timerSpan);
+
+  const columnElement = document.getElementById(d.column);
+  if (columnElement) {
+    columnElement.appendChild(subTimerDiv);
+  } else {
+    console.error(`Element with id "${d.column}" not found.`);
+  }
+}
+
+function updateTimers(endDate, docID) {
+  countdown(endDate, docID);
   countdown("2025-06-16T12:30:00", "john");
-  countdown("2025-04-11T13:30:00","springtimer");
-  countdown("2029-01-20T09:00:00", "trumptimer");
 }

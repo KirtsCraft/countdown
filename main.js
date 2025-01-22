@@ -39,7 +39,7 @@ function countdown(endDate, docID) {
 
 async function getTimerData() {
   try {
-    const res = await fetch("./timer-data.json");
+    const res = await fetch("./assets/timer-data.json");
     if (!res.ok) {
       throw new Error(`HTTP error! Status: ${res.status}`);
     }

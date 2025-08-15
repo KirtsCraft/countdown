@@ -74,5 +74,5 @@ function useTimerData(d) {
 
 function updateTimers(endDate, docID) {
   countdown(endDate, docID);
-  countdown("2025-05-23T12:30:00", "john");
+  countdown("2026-05-17T19:30:00", "john");
 }
